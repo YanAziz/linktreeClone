@@ -76,6 +76,10 @@ img {
   height: auto;
 }
 
+span {
+  font-weight: 600;
+}
+
 /*==================== REUSABLE CSS CLASSES ====================*/
 .container {
   max-width: 968px;
@@ -237,12 +241,20 @@ img {
   display: flex;
 }
 
+.event-content a {
+  text-decoration: none;
+}
+
 .event-title {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 0.8rem;
+}
+
+.event-title-text {
+  color: var(--text-color-lighten);
 }
 
 .event-date {
@@ -253,6 +265,7 @@ img {
 
 .event-date-text {
   font-size: 0.7rem;
+  color: var(--title-color);
   background-color: var(--text-color-warning);
   padding: 0.2rem 0.8rem;
   border-radius: 0.4rem;
@@ -295,7 +308,7 @@ img {
 }
 
 /*==================== FOOTER ====================*/
-.footer__copy {
+.footer-copy {
   display: block;
   margin: 2.5rem 0 2rem;
   text-align: center;
@@ -317,4 +330,72 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--hue), 8%, 44%);
+}
+
+/*==================== BREAKPOINTS ====================*/
+
+/*For small devices*/
+@media screen and (max-width: 340px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .filters-content {
+    display: grid;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile-buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
+/*For medium devices */
+@media screen and (min-width: 576px) {
+  .filters-content {
+    width: 332px;
+    margin: 3rem auto;
+  }
+}
+
+/*For large devices */
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile {
+    padding-top: 4rem;
+  }
+
+  .profile-border {
+    width: 135px;
+    height: 135px;
+  }
+
+  .profile-perfil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-perfil img {
+    width: 120px;
+  }
+
+  .profile-place {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-buttons {
+    column-gap: 2rem;
+  }
+
+  .footer-copy {
+    margin: 4.5rem 0 2.5rem;
+  }
 }
