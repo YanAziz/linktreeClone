@@ -217,7 +217,7 @@ span {
   background-color: var(--body-color);
 }
 
-/*==================== EVENT ==================== */
+/* ==================== EVENT ==================== */
 .event-card {
   position: relative;
   border-radius: 0.5rem;
